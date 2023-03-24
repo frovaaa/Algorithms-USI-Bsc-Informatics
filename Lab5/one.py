@@ -7,14 +7,14 @@ def rotate(A, k):
     result = B + C
     return result
 
-def rotate_in_place(A,k):
-    for i in range(len(A) + k):
-        realI = (i - k) % len(A)
-
-        temp = A[i]
-        A[i] = A[realI]
-        A[realI] = temp
-    return A
+# def rotate_in_place(A,k):
+#     for i in range(len(A) + k):
+#         realI = (i - k) % len(A)
+#
+#         temp = A[i]
+#         A[i] = A[realI]
+#         A[realI] = temp
+#     return A
 
 # # print(rotate([1,2,3,4,5,6,7,8,9],10))
 # #[2,3,4,5,6,7,8,9,1]
@@ -25,3 +25,14 @@ def rotate_in_place(A,k):
 #         A.append(A[0])
 #         del A[0]
 #     return A
+
+def rotate_in_place(A, k):
+    flip(A, 0, len(A) - k)
+    flip(A, 0, len(A))
+    return A
+
+
+def flip(A, begin, end):
+    for i in range(begin, end // 2):
+        A[i], A[end - i - 1] = A[end - i - 1], A[i]
+
