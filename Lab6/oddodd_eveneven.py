@@ -7,6 +7,8 @@ def oddodd_eveneven(A):
         else:
             nOfOdds += 1
 
+    print("ODDS: ", nOfOdds, " EVENS: ", nOfEvens)
+
     if nOfEvens >= nOfOdds:
         howManyRem = nOfEvens - (len(A) // 2)
 
@@ -56,13 +58,13 @@ def oddodd_eveneven(A):
                 if A[k] % 2 != 0:
                     A[k], A[oddPos] = A[oddPos], A[k]
                     oddPos += 2
-            elif k % 2 != 0:
+            elif k % 2 == 0:
                 if A[k] % 2 != 0:
                     A[k], A[oddPos] = A[oddPos], A[k]
                     oddPos += 2
 
         finalPos = 0
-        if (len(A) - 1) % 2 == 0:
+        if (len(A) - 1) % 2 != 0:
             finalPos = len(A) - 2
         else:
             finalPos = len(A) - 1
@@ -71,7 +73,7 @@ def oddodd_eveneven(A):
             if howManyRem == 0:
                 break
 
-            if A[j] % 2 == 0:
+            if A[j] % 2 != 0:
                 A[j], A[finalPos] = A[finalPos], A[j]
                 finalPos -= 2
                 howManyRem -= 1
@@ -80,7 +82,7 @@ def oddodd_eveneven(A):
 
 
 # A = [17, 18, 18, 10, 6, 4, 60, 37, 59, 31, 42, 43]
-# A = [17, 18, 18, 11, 3, 5, 60, 37, 59, 31, 47, 43]
+# A = [16, 18, 17, 10, 3, 5, 60, 37, 59, 31, 47, 43]
 A = [17, 12, 18, 10, 6, 5, 60, 36, 59, 32, 42, 43]
 
 # A = [47, 50, 7, 78, 59, 76, 43, 92, 36, 60, 30, 50]

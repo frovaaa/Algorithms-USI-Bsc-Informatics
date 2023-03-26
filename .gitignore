@@ -79,3 +79,8 @@ fabric.properties
 
 __pycache__/
 
+programming/
+
+CLRS.pdf
+.RocketBook/
+sieve_of_erathosthenes.py

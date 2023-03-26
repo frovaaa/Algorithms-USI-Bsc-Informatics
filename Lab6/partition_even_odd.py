@@ -7,5 +7,5 @@ def partition_even_odd(A):
     return A
 
 
-# A = [7, 17, 74, 21, 7, 9, 26, 10]
-# print(partition_even_odd(A))
+A = [7, 17, 74, 21, 7, 9, 26, 10]
+print(partition_even_odd(A))

@@ -23,5 +23,5 @@ def partition_primes_composites(A):
 # O(n) to scan all the array
 # for each element I do O(n) to check if it's prime
 
-# A = [7, 17, 74, 21, 7, 9, 26, 10, 11, 449, 52, 47, 7, 3, 5]
-# print(partition_primes_composites(A))
+A = [7, 17, 74, 21, 7, 9, 26, 10, 11, 449, 52, 47, 7, 3, 5]
+print(partition_primes_composites(A))
