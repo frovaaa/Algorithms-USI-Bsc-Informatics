@@ -30,7 +30,6 @@ def wordDistance(beginWord, endWord, wordList) -> int:
                     visited.add(neighbour)
     return 0
 
-
 def createMap(wordList):
     d = defaultdict(list)
     for word in wordList:
